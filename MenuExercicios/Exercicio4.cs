@@ -22,11 +22,11 @@ namespace MenuExercicios
                 if (string.IsNullOrWhiteSpace(palavra))
                     continue;
 
-                if (dicionario.ContainsKey(palavra))
-                    dicionario[palavra]++;
+                if (dicionario.ContainsKey(palavra.ToLower()))
+                    dicionario[palavra.ToLower()]++;
 
                 else
-                    dicionario.Add(palavra, 1);
+                    dicionario.Add(palavra.ToLower(), 1);
             }
             return dicionario;
         }

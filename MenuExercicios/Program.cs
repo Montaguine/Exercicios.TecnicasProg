@@ -58,9 +58,10 @@ namespace MenuExercicios
                         Console.Clear();
                         Exercicio4 ex4 = new Exercicio4();
                         Console.Clear();
-                        List<Dictionary<string, int>> lista = ex4.ContadorPalavras();
+                        Dictionary<string, int> lista = ex4.ContadorPalavras();
                         Console.WriteLine("O texto contém as seguintes palavras e suas respectivas quantidades:");
-                        foreach (KeyValuePair<string, int> item in lista[0])
+                        Console.WriteLine();
+                        foreach (KeyValuePair<string, int> item in lista)
                         {
                             Console.WriteLine($"{item.Key} - {item.Value}");
                         }

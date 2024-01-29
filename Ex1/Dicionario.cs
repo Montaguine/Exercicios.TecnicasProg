@@ -8,6 +8,6 @@ namespace Interfaces
 {
     public interface Dicionario
     {
-        public List<Dictionary<string, int>> ContadorPalavras();
+        public Dictionary<string, int> ContadorPalavras();
     }
 }

@@ -9,40 +9,45 @@ namespace MenuExercicios
 {
     internal class Exercicio3 : Fila
     {
-        Random random = new Random();
+        static Random random = new Random();
         public List<Jogador> BatataQuente(int jogadores)
         {
             List<Jogador> lista = new List<Jogador>();
             List<Jogador> classificacao = new List<Jogador>();
+            Queue<Jogador> fila = new Queue<Jogador>();
+
             for (int i = 0; i < jogadores; i++)
             {
-                lista.Add(new Jogador(i+1));
+                lista.Add(new Jogador(i + 1));
             }
+
             lista = lista.OrderBy(x => random.Next()).ToList();
-            int passes = random.Next(1, 101);
-            while (lista.Count > 1)
+
+            foreach (var jogador in lista)
             {
-                for(int i = passes; i >= 0; i--)
+                fila.Enqueue(jogador);
+            }
+
+            while (fila.Count > 1)
+            {
+                int passes = random.Next(1, 101);
+
+                for (int i = passes; i >= 0; i--)
                 {
-                    if (i > 0) 
-                    { 
-                        Jogador passe = lista[0];
-                        lista.RemoveAt(0);
-                        lista.Add(passe);
+                    if (i > 0)
+                    {
+                        Jogador passe = fila.Dequeue();
+                        fila.Enqueue(passe);
                     }
 
-                    if(i == 0)
+                    if (i == 0)
                     {
-                        classificacao.Add(lista[0]);
-                        lista.RemoveAt(0);
+                        Jogador eliminado = fila.Dequeue();
+                        classificacao.Add(eliminado);
                     }
                 }
-                if (lista.Count == 1)
-                {
-                    classificacao.Add(lista[0]);
-                    lista.RemoveAt(0);
-                }
             }
+            classificacao.Add(fila.Dequeue());
             return classificacao;
         }
     }

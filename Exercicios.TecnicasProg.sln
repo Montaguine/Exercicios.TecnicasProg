@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34408.163
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaces", "Ex1\Interfaces.csproj", "{DB0E1F81-E4F7-454C-87AB-065E5810695D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuExercicios", "MenuExercicios\MenuExercicios.csproj", "{DCBC7271-9E45-4DBB-AD15-4785850B6810}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB0E1F81-E4F7-454C-87AB-065E5810695D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB0E1F81-E4F7-454C-87AB-065E5810695D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB0E1F81-E4F7-454C-87AB-065E5810695D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB0E1F81-E4F7-454C-87AB-065E5810695D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCBC7271-9E45-4DBB-AD15-4785850B6810}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCBC7271-9E45-4DBB-AD15-4785850B6810}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCBC7271-9E45-4DBB-AD15-4785850B6810}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCBC7271-9E45-4DBB-AD15-4785850B6810}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {258C2D69-FC66-40E1-8310-BC21B94E9BE8}
+	EndGlobalSection
+EndGlobal
